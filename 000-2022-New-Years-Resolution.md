@@ -9,6 +9,7 @@
    1. Pick a Rust open source project
    2. Become a committer of the project
 3. Re-write my personal website in Vue
+4. Produce Rust programming tutorial in Chinese
 
 ## Personal Life
 

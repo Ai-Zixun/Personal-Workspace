@@ -21,7 +21,8 @@
 
 1. Rust
 2. Vue
-3. Serverless
+3. Quantum Computing on AWS
+4. Serverless
    1. AWS
       1. Lambda
       2. Step Function
@@ -30,3 +31,8 @@
       2. Function
    3. Azure
    4. Alibaba Cloud
+
+## Course and Books I'm planning to complete
+
+1. MIT 6.824
+2. DDIA

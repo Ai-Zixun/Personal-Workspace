@@ -1,3 +1,13 @@
+# Confidence
+
+* Traits of Confident People
+    * Postures: How we look?
+        * Smooth gestures
+        * More eye contacts
+        * Gain the command of the room
+    * Time
+        * Take my time to do things in my pace
+
 # Career Path
 
 * Avoid decision/analysis paralysis

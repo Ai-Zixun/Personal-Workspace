@@ -2,11 +2,25 @@
 
 * They are different tools for different jobs
 
-Design Considerations
+Design Considerations: there is always a best API style for the problem
+
+## API Styles
+
+* Query APIs
+  * Flexibility
+  * For client to retrieve data from the server
+* Flat File APIs
+  * SFTP
+* Streaming APIs
+* RPC APIs
+  * gRPC, thrift
+  * A component calling another components and hide the in-between networking
+* Web APIs
 
 ## RPC - Remote Procedure Call (gRPC, Apache Thrift, Coral)
 
-Model the function of the server
+* Model the function of the server
+* Data over the wire (HTTP/2 + protobuf)
 
 Advantages:
 * Simple and Easy to Understand
@@ -27,7 +41,11 @@ Good For:
 
 ## REST - Representational State Transfer (json, ION)
 
-Model the resource of the server
+* Model the resource of the server
+* States machines over the wire
+
+* For API longevity, not for short-term efficiency
+* Reduce Server-Client coupling
 
 Entry point
 * client sending a request to the entry point
@@ -139,3 +157,28 @@ Solution: GraphQL
 Consideration:
 * Data is Graph-like
 * Optimize for high latency
+
+## Use Case: Composite API - Backend for Frontend
+
+Solution: GraphQL
+Considerations:
+* Connect a lot of different frontends
+* Connect a lot of different backends
+* The middle service can use GraphQL to combine responses from different backends
+
+
+## Contract First Design Approach
+
+Contract
+* GraphQL => the Schema
+* gRPC => protobuf
+* REST =>  RAML, Swagger (OpenAPI)
+
+APP
+* mock against the contract
+
+API
+* mock against the contract
+
+Product
+* Merge the APP and API

@@ -27,6 +27,11 @@ struct Solution {}
 impl Solution {
     const MODULO: i64 = 10_0000_0007;
 
+    /// Edges: E
+    /// Nodes/Vertices: V
+    ///
+    /// Time Complexity: O(E)
+    /// Space Complexity: O(V + E)
     fn convert_edge_list_to_adjacency_list(
         edges: Vec<Vec<i32>>,
         n: usize,
@@ -49,6 +54,11 @@ impl Solution {
         let mut path_count: Vec<i64> = vec![0; n];
 
         // Dijkstra
+        // Edges: E
+        // Nodes/Vertices: V
+        //
+        // Time Complexity: O(E + V log V )
+        // Space Complexity: O(V)
         let mut pq: BinaryHeap<Node> = BinaryHeap::new();
         path_count[0] = 1;
         cost[0] = 0;

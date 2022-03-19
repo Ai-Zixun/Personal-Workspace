@@ -35,6 +35,11 @@ impl Solution {
         let graph = Self::convert_edge_list_to_adjacency_list(edges, succ_prob, n);
 
         // Dijkstra
+        // Edges: E
+        // Nodes/Vertices: V
+        //
+        // Time Complexity: O(E + V log V )
+        // Space Complexity: O(V)
         let mut cost = vec![0.0; n];
         cost[start] = 1.0;
 
@@ -57,6 +62,11 @@ impl Solution {
         cost[end]
     }
 
+    /// Edges: E
+    /// Nodes/Vertices: V
+    ///
+    /// Time Complexity: O(E)
+    /// Space Complexity: O(V + E)
     fn convert_edge_list_to_adjacency_list(
         edges: Vec<Vec<i32>>,
         succ_prob: Vec<f64>,
